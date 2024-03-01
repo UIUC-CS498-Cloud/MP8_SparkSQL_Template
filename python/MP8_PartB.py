@@ -19,7 +19,7 @@ spark = SparkSession.builder.getOrCreate()
 # Spark SQL - DataFrame API
 
 ####
-# 2. Counting (16 points): How many lines does the file contains? Answer this question via both RDD api & #Spark SQL
+# 2. Counting : How many lines does the file contains? Answer this question via both RDD api & #Spark SQL
 ####
 
 # Spark SQL 

@@ -29,6 +29,7 @@ public final class MP8_PartC {
       .appName("MP8")
       .getOrCreate();
     JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
+    SQLContext sqlContext = new SQLContext(sc);
     /*
      * 1. Setup: write a function to load it in an RDD & DataFrame
      */
@@ -40,7 +41,7 @@ public final class MP8_PartC {
     // Spark SQL - DataSet API
 
     /*
-     * 3. Filtering (16 points) Count the number of appearances of word 'ATTRIBUTE'
+     * 3. Filtering : Count the number of appearances of word 'ATTRIBUTE'
      */
     // Dataset/Spark SQL API
 
@@ -49,3 +50,13 @@ public final class MP8_PartC {
     sc.stop();
   }
 }
+
+/* Sample Output
+
++--------+
+|count(1)|
++--------+
+|      11|
++--------+
+
+*/

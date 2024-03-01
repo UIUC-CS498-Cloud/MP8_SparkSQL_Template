@@ -29,6 +29,7 @@ public final class MP8_PartB {
       .appName("MP8")
       .getOrCreate();
     JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
+    SQLContext sqlContext = new SQLContext(sc);
     /*
      * 1. Setup: write a function to load it in an RDD & DataFrame
      */
@@ -42,7 +43,7 @@ public final class MP8_PartB {
 
 
     /*
-     * 2. Counting (16 points): How many lines does the file contains? Answer 
+     * 2. Counting : How many lines does the file contains? Answer 
      * this question via both RDD api & #Spark SQL
      */
 
@@ -52,3 +53,13 @@ public final class MP8_PartB {
     sc.stop();
   }
 }
+
+/* Sample Output
+
++--------+
+|count(1)|
++--------+
+|   50013|
++--------+
+
+*/

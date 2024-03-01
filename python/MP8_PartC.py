@@ -18,7 +18,7 @@ spark = SparkSession.builder.getOrCreate()
 # Spark SQL - DataFrame API
 
 ####
-# 3. Filtering (16 points) Count the number of appearances of word 'ATTRIBUTE'
+# 3. Filtering : Count the number of appearances of word 'ATTRIBUTE'
 ####
 
 # Spark SQL

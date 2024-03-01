@@ -9,6 +9,7 @@ import org.apache.spark.sql.SQLContext;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.RowFactory;
 import org.apache.spark.sql.Dataset;
+import static org.apache.spark.sql.functions.*;
 import org.apache.spark.sql.types.DataTypes;
 import org.apache.spark.sql.types.StructField;
 import org.apache.spark.sql.types.StructType;
@@ -19,6 +20,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.regex.Pattern;
+import java.util.Map;
 //import java.util.function.Function;
 
 public final class MP8_PartD {
@@ -29,6 +31,7 @@ public final class MP8_PartD {
       .appName("MP8")
       .getOrCreate();
     JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
+    SQLContext sqlContext = new SQLContext(sc);
     /*
      * 1. Setup: write a function to load it in an RDD & DataFrame
      */
@@ -41,7 +44,7 @@ public final class MP8_PartD {
 
 
     /*
-     * 4. MapReduce (16 points): List the top three words that have appeared in the
+     * 4. MapReduce : List the top three words that have appeared in the
      * greatest number of years.
      */
 
@@ -52,3 +55,16 @@ public final class MP8_PartD {
     sc.stop();
   }
 }
+
+/* Sample Output (may look slightly different for you due to ties with other words)
+
++-------------+--------+
+|         word|count(1)|
++-------------+--------+
+|    ATTRIBUTE|      11|
+|approximation|       4|
+|    agast_ADV|       4|
++-------------+--------+
+only showing top 3 rows
+
+*/

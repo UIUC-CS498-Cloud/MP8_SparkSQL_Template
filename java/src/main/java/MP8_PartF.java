@@ -23,6 +23,7 @@ public class MP8_PartF {
         .appName("MP8")
         .getOrCreate();
         JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
+        SQLContext sqlContext = new SQLContext(sc);
         /*
         * 1. Setup: write a function to load it in an RDD & DataFrame
         */
@@ -32,7 +33,7 @@ public class MP8_PartF {
 
 
         /**
-         * 2. Frequency Increase (16 points): analyze the frequency increase of words starting from the year 1500 to the year 2000
+         * 2. Frequency Increase : analyze the frequency increase of words starting from the year 1500 to the year 2000
          */
         
     }

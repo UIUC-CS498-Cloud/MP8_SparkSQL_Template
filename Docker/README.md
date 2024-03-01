@@ -4,4 +4,4 @@ This is the Docker for MP8 SparkSQL.
 
 ## Log
 
-Last updated in April 2023, by Ruijie Wang (ruijiew2@illinois.edu).
+Last updated in February 2024, by Gautam Putcha (gputcha2@illinois.edu).

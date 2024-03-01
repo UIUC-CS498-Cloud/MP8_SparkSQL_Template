@@ -20,7 +20,7 @@ spark = SparkSession.builder.getOrCreate()
 
 
 ####
-# 4. MapReduce (16 points): List the top three words that have appeared in the greatest number of years.
+# 4. MapReduce : List the top three words that have appeared in the greatest number of years.
 ####
 
 # Spark SQL
@@ -33,3 +33,5 @@ spark = SparkSession.builder.getOrCreate()
 # |    agast_ADV|       4|
 # +-------------+--------+
 # only showing top 3 rows
+
+# The above output may look slightly different for you due to ties with other words

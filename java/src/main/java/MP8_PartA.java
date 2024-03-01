@@ -29,8 +29,9 @@ public final class MP8_PartA {
       .appName("MP8")
       .getOrCreate();
     JavaSparkContext sc = new JavaSparkContext(spark.sparkContext());
+    SQLContext sqlContext = new SQLContext(sc);
     /*
-     * 1. Setup (16 points): write a function to load it in an RDD & DataFrame
+     * 1. Setup : write a function to load it in an RDD & DataFrame
      */
     
     // RDD API
@@ -45,3 +46,13 @@ public final class MP8_PartA {
     sc.stop();
   }
 }
+
+/* Sample Output
+
++--------+
+|count(1)|
++--------+
+|   50013|
++--------+ 
+
+*/
